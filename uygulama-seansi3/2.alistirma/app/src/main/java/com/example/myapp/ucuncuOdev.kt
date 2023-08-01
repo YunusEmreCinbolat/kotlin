@@ -2,26 +2,25 @@ fun main() {
     val list1 = listOf(3, 1, 4)
     val list2 = listOf(2, 5, 6)
 
-    val mergedAndSorted = mergeAndSortLists(list1, list2)
+    val mergeSorted = merge(list1, list2)
 
-    println("Birleştirilmiş ve Sıralanmış Liste: $mergedAndSorted")
+    println("Birleştirilmiş ve Sıralanmış Liste: $mergeSorted")
 }
 
-fun mergeAndSortLists(list1: List<Int>, list2: List<Int>): List<Int> {
-    val mergedList = mutableListOf<Int>()
+fun merge(list1: List<Int>, list2: List<Int>): List<Int> {
+    val birlestirilmislist = mutableListOf<Int>()
 
-    mergedList.addAll(list1)
-    mergedList.addAll(list2)
+    birlestirilmislist.addAll(list1)
+    birlestirilmislist.addAll(list2)
 
-    for (i in 0 until mergedList.size - 1) {
-        for (j in i + 1 until mergedList.size) {
-            if (mergedList[i] > mergedList[j]) {
-                val temp = mergedList[i]
-                mergedList[i] = mergedList[j]
-                mergedList[j] = temp
+    for (i in 0 until birlestirilmislist.size - 1) {
+        for (j in i + 1 until birlestirilmislist.size) {
+            if (birlestirilmislist[i] > birlestirilmislist[j]) {
+                val temp = birlestirilmislist[i]
+                birlestirilmislist[i] = birlestirilmislist[j]
+                birlestirilmislist[j] = temp
             }
         }
     }
-
-    return mergedList
+    return birlestirilmislist
 }
