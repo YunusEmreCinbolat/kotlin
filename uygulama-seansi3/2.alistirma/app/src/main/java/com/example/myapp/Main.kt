@@ -7,5 +7,11 @@ fun main() {
 }
 
 fun filterOddNumbers(list: List<Int>): List<Int> {
-    return list.filter { it % 2 != 0 }
+    var sayilar=ArrayList<Int>()
+    for ( sayi in list){
+        if(sayi%2 !=0) {
+            sayilar.add(sayi)
+        }
+    }
+    return sayilar
 }
