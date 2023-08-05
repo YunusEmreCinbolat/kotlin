@@ -75,19 +75,19 @@ fun takvim(
         }
     }
         for (i in 0..index){
-            print("   ")
+            print("  ")
         }
         for (i in 1..31){
-            print("$i ")
+            if(i>9){
+                print("$i ")
+            }
+            else
+                print("$i  ")
             index++
             if(index==7){
                 println()
                 index=0
-
             }
-
-
         }
         println()
-
 }
