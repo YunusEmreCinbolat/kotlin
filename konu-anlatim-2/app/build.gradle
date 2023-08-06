@@ -6,7 +6,9 @@ plugins {
 android {
     namespace 'com.example.tcno'
     compileSdk 33
-
+    buildFeatures{
+        viewBinding=true
+    }
     defaultConfig {
         applicationId "com.example.tcno"
         minSdk 24
