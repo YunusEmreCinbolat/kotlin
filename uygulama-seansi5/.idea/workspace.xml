@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebafb260-848a-431d-9fbd-de6127b5e7b5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/proguard-rules.pro" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/androidTest/java/com/example/myapp/ExampleInstrumentedTest.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/java/com/example/myapp/AnasayfaMainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/java/com/example/myapp/AyarlarMainActivity.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/java/com/example/myapp/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/java/com/example/myapp/PortfolyoMainActivity.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/layout/activity_anasayfa_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/layout/activity_ayarlar_main.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/layout/activity_portfolyo_main.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
@@ -41,6 +48,43 @@
       <change afterPath="$PROJECT_DIR$/1.odev/gradlew" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/gradlew.bat" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/1.odev/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/androidTest/java/com/example/myapp/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/java/com/example/myapp/MainActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/app/src/test/java/com/example/myapp/ExampleUnitTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2.odev/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
