@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "232891344926",
+    "project_id": "kisikaydetme",
+    "storage_bucket": "kisikaydetme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232891344926:android:4af4d0d1ba736e22cc660f",
+        "android_client_info": {
+          "package_name": "com.example.reycycleviewandcardview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232891344926-juifucktli569g50puv07vtm8p6ijjvm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGpKtPvPnOAOKw2v7LNVuHz7miTImkW2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232891344926-juifucktli569g50puv07vtm8p6ijjvm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
