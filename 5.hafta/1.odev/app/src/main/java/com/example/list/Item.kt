@@ -1,1 +1,3 @@
-class ListItem(val imageResId: Int, val text: String)
+package com.example.list
+
+data class Item(val imageResource: Int, val text: String)
