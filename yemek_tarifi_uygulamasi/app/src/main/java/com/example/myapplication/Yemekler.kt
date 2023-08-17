@@ -1,4 +1,5 @@
 package com.example.myapplication
 
-class Yemekler {
+class Yemekler(var ad:String,var resimAd:String) {
+
 }
