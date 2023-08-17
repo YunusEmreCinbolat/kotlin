@@ -7,12 +7,12 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextAd"
+        android:id="@+id/editTextTextAdSoyad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="139dp"
         android:ems="10"
-        android:hint="Adınız"
+        android:hint="Adınız Soyadınız"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -20,17 +20,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/editTextTextYas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name"
+        android:hint="Yaşınız"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextAd" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextAdSoyad" />
 
     <EditText
         android:id="@+id/editTextTextHakkında"
@@ -43,5 +43,25 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="279dp" />
+
+    <Button
+        android:id="@+id/buttonkaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Kaydet"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextHakkında"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextHakkında" />
+
+    <Button
+        android:id="@+id/buttongoster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Kullanıcıları Göster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonkaydet" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

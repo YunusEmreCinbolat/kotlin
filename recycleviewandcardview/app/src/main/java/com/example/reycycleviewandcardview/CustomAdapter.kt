@@ -21,9 +21,6 @@ class CustomAdapter(private val userList: ArrayList<User>):
             R.id.textViewHakkinda
         )
 
-        init {
-
-        }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomAdapter.ViewHolder {
         val view= LayoutInflater.from(parent.context).inflate(R.layout.user_list_item,parent,false)
