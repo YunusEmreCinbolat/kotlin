@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/navigation_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/girisFragment">
 
+    <fragment
+        android:id="@+id/girisFragment"
+        android:name="com.example.myapplication.GirisFragment"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_girisFragment_to_gelismeFragment"
+            app:destination="@id/gelismeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gelismeFragment"
+        android:name="com.example.myapplication.GelismeFragment"
+        android:label="fragment_gelisme"
+        tools:layout="@layout/fragment_gelisme" >
+        <action
+            android:id="@+id/action_gelismeFragment_to_sonucFragment"
+            app:destination="@id/sonucFragment"
+            app:popUpTo="@id/gelismeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sonucFragment"
+        android:name="com.example.myapplication.SonucFragment"
+        android:label="fragment_sonuc"
+        tools:layout="@layout/fragment_sonuc" />
 </navigation>
