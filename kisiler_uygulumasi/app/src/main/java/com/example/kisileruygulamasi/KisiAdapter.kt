@@ -65,20 +65,18 @@ class KisiAdapter(private val mContext: Context,private val kisiList: List<kisil
         val  editTextphone=design.findViewById(R.id.phone_et) as EditText
 
         editTextName.setText(user.kisi_ad)
-        editTextphone.setText(user.kisi_tel)
+        editTextphone.setText(user.kisi_tel.toString())
 
-            val alertDialog=AlertDialog.Builder(mContext)
-            alertDialog.setTitle("Kisi Güncelle")
-            alertDialog.setView(design)
-            alertDialog.setPositiveButton("Güncelle"){dialogInterface,i ->
+            val alertDialog=AlertDialog.Builder(mContext).setTitle("Kisi Güncelle").setView(design).setPositiveButton("Güncelle"){dialogInterface,i ->
                 val name = editTextName.text.toString().trim()
                 val phone=editTextphone.text.toString().trim()
                 Toast.makeText(mContext,"$name - $phone ",Toast.LENGTH_LONG).show()
             }
-            alertDialog.setNegativeButton("İptal"){ dialogInterface, i ->
+            .setNegativeButton("İptal"){ dialogInterface, i ->
 
             }
-            alertDialog.create().show()
+            .create()
+            .show()
     }
 
 }
