@@ -1,24 +1,29 @@
 package com.example.kisileruygulamasi
 
 import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class KisiAdapter(val mContext: Context,val kisiList: List<kisiler>): RecyclerView.Adapter<KisiAdapter.KisiTutucu>() {
-    inner class KisiTutucu(tasarim: View):RecyclerView.ViewHolder(tasarim) {
-
+class KisiAdapter(private val mContext: Context,private val kisiList: List<kisiler>): RecyclerView.Adapter<KisiAdapter.KisiTutucu>() {
+    inner class KisiTutucu(val tasarim: View ):RecyclerView.ViewHolder(tasarim){
+        val KisiAd_tel:TextView=tasarim.findViewById(R.id.textViewAdTelefon)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KisiTutucu {
-        TODO("Not yet implemented")
+        val tasarim=LayoutInflater.from(mContext).inflate(R.layout.list_item,parent,false)
+        return KisiTutucu(tasarim)
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+       return kisiList.size
     }
 
     override fun onBindViewHolder(holder: KisiTutucu, position: Int) {
-        TODO("Not yet implemented")
+       val kisi=kisiList[position]
+        holder.KisiAd_tel.text="${kisi.kisi_ad} - ${kisi.kisi_tel}"
+
     }
 }
