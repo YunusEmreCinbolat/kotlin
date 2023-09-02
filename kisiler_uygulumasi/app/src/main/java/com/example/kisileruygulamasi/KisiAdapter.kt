@@ -59,7 +59,7 @@ class KisiAdapter(private val mContext: Context,private val kisiList: List<kisil
 
 
     }
-    private fun showAlert(user: kisiler){
+     fun showAlert(user: kisiler){
         val design=LayoutInflater.from(mContext).inflate(R.layout.alert_design,null)
         val editTextName=design.findViewById(R.id.name_et) as EditText
         val  editTextphone=design.findViewById(R.id.phone_et) as EditText
@@ -68,14 +68,15 @@ class KisiAdapter(private val mContext: Context,private val kisiList: List<kisil
         editTextphone.setText(user.kisi_tel)
 
         val alertDialog=AlertDialog.Builder(mContext)
-            .setTitle("Kisi Güncelle")
-            .setView(design)
-            .setPositiveButton("Güncelle"){dialogInterface,i ->
+            alertDialog.setTitle("Kisi Güncelle")
+            alertDialog.setView(design)
+            alertDialog.setPositiveButton("Güncelle"){dialogInterface,i ->
                 val name = editTextName.text.toString().trim()
                 val phone=editTextphone.text.toString().trim()
                 Toast.makeText(mContext,"$name - $phone ",Toast.LENGTH_LONG).show()
             }
-            .setNegativeButton("İptal"){ dialogInterface, i ->}.create().show()
+            alertDialog.setNegativeButton("İptal"){ dialogInterface, i ->}
+                alertDialog.create().show()
     }
 
 }
