@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "365091488107",
+    "project_id": "firebasauthenticationlesson2",
+    "storage_bucket": "firebasauthenticationlesson2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365091488107:android:29f12a4134638cbb064c2e",
+        "android_client_info": {
+          "package_name": "com.example.firebasauthenticationlesson2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365091488107-jpblq6si8ep99di6i5bra6cvpqsktsle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwVpfaIZMdrDdDfeibIy-t2aRAVZXrBa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365091488107-jpblq6si8ep99di6i5bra6cvpqsktsle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
