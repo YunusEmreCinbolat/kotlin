@@ -7,6 +7,9 @@ plugins {
 android {
     namespace = "com.example.firebasauthenticationlesson2"
     compileSdk = 33
+    buildFeatures{
+        viewBinding=true
+    }
 
     defaultConfig {
         applicationId = "com.example.firebasauthenticationlesson2"
