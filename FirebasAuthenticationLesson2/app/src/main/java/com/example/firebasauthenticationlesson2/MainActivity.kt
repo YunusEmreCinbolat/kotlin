@@ -15,5 +15,6 @@ class MainActivity : AppCompatActivity() {
         val refNesne=database.getReference("nesneler")
        /* val nesne = Nesneler("Havuç",9,"Sebze")
         refNesne.push().setValue(nesne)*/
+        refNesne.child("-NdVHuTCle0MMgpevARc").removeValue()
     }
 }
