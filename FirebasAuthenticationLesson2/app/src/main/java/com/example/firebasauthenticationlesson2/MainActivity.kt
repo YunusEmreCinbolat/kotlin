@@ -15,6 +15,13 @@ class MainActivity : AppCompatActivity() {
         val refNesne=database.getReference("nesneler")
        /* val nesne = Nesneler("Havuç",9,"Sebze")
         refNesne.push().setValue(nesne)*/
-        refNesne.child("-NdVHuTCle0MMgpevARc").removeValue()
+
+        //refNesne.child("-NdVHuTCle0MMgpevARc").removeValue()
+
+        val updateInfo= HashMap<String,Any>()
+        updateInfo["nenneAdi"]="Pasta"
+        updateInfo["nesneAdet"]=12
+        updateInfo["nesneAlani"]="Tatlı"
+        refNesne.child("-NdVITgAzp35TgG_R0HL").updateChildren(updateInfo)
     }
 }
