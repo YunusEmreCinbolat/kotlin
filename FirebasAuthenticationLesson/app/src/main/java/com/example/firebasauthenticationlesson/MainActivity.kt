@@ -15,8 +15,13 @@ class MainActivity : AppCompatActivity() {
         val database=FirebaseDatabase.getInstance()
 
         val refKisiler=database.getReference("kisiler")
-        
+
+        /*kayıt
         val kisi= Kisiler("ali",5)
         refKisiler.push().setValue(kisi)
+         */
+        /*silme
+        refKisiler.child("-NdUnNvNFK0ztwB2WqA7").removeValue()
+        */
     }
 }
