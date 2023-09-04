@@ -23,5 +23,11 @@ class MainActivity : AppCompatActivity() {
         /*silme
         refKisiler.child("-NdUnNvNFK0ztwB2WqA7").removeValue()
         */
+        // güncelleme
+        val updateInfo=HashMap<String,Any>()
+        updateInfo["kisiAd"]="Mehmet"
+        updateInfo["kisiYas"]=65
+        refKisiler.child("-NdUn3USMRGiiqB-onzu").updateChildren(updateInfo)
+        
     }
 }
