@@ -33,7 +33,7 @@ class KategorilerAdapter(private  val mContext: Context,private val kategoriList
         val kategoriler= kategoriListe.get(position)
         holder.textViewKategoriAd.text=kategoriler.kategori_ad
         holder.kategori_card.setOnClickListener {
-            
+
         }
     }
 }
