@@ -99,6 +99,10 @@ class MainActivity : AppCompatActivity(), OnQueryTextListener {
         alertDialog.setPositiveButton("Ekle"){dialogInterface,i ->
             val name = editTextName.text.toString().trim()
             val phone=editTextphone.text.toString().trim()
+            val kisi= kisiler("",name,phone)
+            val refUser = database.getReference("kisiler")
+            refUser.push().setValue(kisi)
+
             Toast.makeText(this,"$name - $phone ", Toast.LENGTH_LONG).show()
         }
         alertDialog.setNegativeButton("İptal"){ dialogInterface, i ->}
