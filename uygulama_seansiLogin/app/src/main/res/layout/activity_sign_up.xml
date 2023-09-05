@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FDFCFC"
+    android:backgroundTint="#D3BCBC"
     tools:context=".SignUpActivity">
 
     <EditText
@@ -31,10 +33,10 @@
 
     <Button
         android:id="@+id/buttonSignUp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="212dp"
+        android:backgroundTint="#B14242"
         android:text="Kayıt Ol"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

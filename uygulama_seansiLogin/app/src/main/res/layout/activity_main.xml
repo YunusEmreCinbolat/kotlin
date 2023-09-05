@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F3F3"
+    android:backgroundTint="#D3BCBC"
     tools:context=".MainActivity">
 
     <EditText
@@ -33,9 +35,10 @@
 
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="68dp"
+        android:backgroundTint="#B14242"
         android:text="Giriş Yap"
         app:layout_constraintBottom_toTopOf="@+id/textViewSignUp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,6 +52,8 @@
         android:layout_gravity="center"
         android:layout_marginBottom="112dp"
         android:text="Hesabınız yok mu? Kayıt Olun"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
