@@ -56,7 +56,30 @@ class MainActivity : AppCompatActivity(), OnQueryTextListener {
             }
         })
     }
+    private fun Arama(aramaKelime:String) {
+        val refUser = database.getReference("kisiler")
+        refUser.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                kisilerArrayList = ArrayList()
+                for (data in snapshot.children) {
+                    val user = data.getValue(kisiler::class.java) // Kisi sınıfının doğru kullanımı
+                    if (user != null) {
+                        if(user.kisi_ad!!.contains(aramaKelime)) {
+                            user.kisi_id=data.key
+                            kisilerArrayList.add(user)
+                        }
+                    }
+                }
+                kisiAdapter = KisiAdapter(applicationContext, kisilerArrayList)
+                binding.rv.adapter = kisiAdapter
+                kisiAdapter.notifyDataSetChanged()
+            }
 
+            override fun onCancelled(error: DatabaseError) {
+                // Hata işleme stratejisi belirtmek gerekiyor
+            }
+        })
+    }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu,menu)
         val item=menu?.findItem(R.id.action_ara)
@@ -84,11 +107,13 @@ class MainActivity : AppCompatActivity(), OnQueryTextListener {
 
     override fun onQueryTextSubmit(query: String?): Boolean {
        Log.e("Gönderilen arama",query.toString())
+        Arama(query.toString())
         return true
     }
 
     override fun onQueryTextChange(newText: String?): Boolean {
         Log.e("Harf girdikçe",newText.toString())
+        Arama(newText.toString())
         return true
     }
 
