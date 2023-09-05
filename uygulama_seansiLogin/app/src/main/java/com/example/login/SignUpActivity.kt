@@ -24,16 +24,45 @@ class SignUpActivity : AppCompatActivity() {
             val email = editTextEmail.text.toString()
             val password = editTextPassword.text.toString()
 
+            // Kayıt işlemi başarıyla tamamlandığında
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Kullanıcı başarıyla kayıt oldu
-                        // Giriş ekranına yönlendirme yapabilirsiniz
+                        // E-posta doğrulama e-postası gönder
+                        val user = auth.currentUser
+                        user?.sendEmailVerification()
+                            ?.addOnCompleteListener { verificationTask ->
+                                if (verificationTask.isSuccessful) {
+                                    // E-posta doğrulama e-postası başarıyla gönderildi
+                                    Toast.makeText(baseContext, "Kayıt işlemi başarıyla tamamlandı. Lütfen e-postanızı doğrulayın.", Toast.LENGTH_SHORT).show()
+
+                                    // E-posta doğrulamasını kontrol et
+                                    checkEmailVerificationStatus()
+                                } else {
+                                    // E-posta doğrulama e-postası gönderilemedi, hata mesajını kullanıcıya gösterin
+                                    Toast.makeText(baseContext, "E-posta doğrulama e-postası gönderme hatası.", Toast.LENGTH_SHORT).show()
+                                }
+                            }
                     } else {
                         // Kayıt işlemi başarısız oldu, kullanıcıya bir uyarı gösterin
                         Toast.makeText(baseContext, "Kayıt işlemi başarısız.", Toast.LENGTH_SHORT).show()
                     }
                 }
+
+            // E-posta doğrulama durumunu kontrol etmek için ayrı bir fonksiyon
+
+
+        }
+    }
+    private fun checkEmailVerificationStatus() {
+        val user = FirebaseAuth.getInstance().currentUser
+
+        if (user != null && user.isEmailVerified) {
+            // Kullanıcı giriş yapmış ve e-posta doğrulamasını tamamlamış
+            // Burada gerekli yönlendirmeyi yapabilirsiniz
+        } else {
+            // Kullanıcı ya giriş yapmamış ya da e-posta doğrulamasını tamamlamamış
+            Toast.makeText(baseContext, "Lütfen e-postanızı doğrulayın.", Toast.LENGTH_SHORT).show()
         }
     }
 }

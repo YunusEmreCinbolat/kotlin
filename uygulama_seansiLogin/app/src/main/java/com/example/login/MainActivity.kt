@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
                         // Kullanıcı başarıyla giriş yaptı, istediğiniz ekranı açabilirsiniz
                         // Örneğin, ana ekranı açabilirsiniz
                       Toast.makeText(this,"Giriş başarılı",Toast.LENGTH_LONG).show()
+                        val intent=Intent(this,HomeActivity::class.java)
+                        startActivity(intent)
                         finish()
                     } else {
                         // Giriş işlemi başarısız oldu, kullanıcıya bir uyarı gösterin
