@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(), OnQueryTextListener {
                         kisilerArrayList.add(user)
                     }
                 }
-                kisiAdapter = KisiAdapter(applicationContext, kisilerArrayList)
+                kisiAdapter = KisiAdapter(applicationContext, kisilerArrayList, refkisiler = refUser)
                 binding.rv.adapter = kisiAdapter
                 kisiAdapter.notifyDataSetChanged()
             }
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(), OnQueryTextListener {
                         }
                     }
                 }
-                kisiAdapter = KisiAdapter(applicationContext, kisilerArrayList)
+                kisiAdapter = KisiAdapter(applicationContext, kisilerArrayList,refUser)
                 binding.rv.adapter = kisiAdapter
                 kisiAdapter.notifyDataSetChanged()
             }

@@ -14,8 +14,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kisileruygulamasi.databinding.ListItemBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.database.DatabaseReference
 
-class KisiAdapter(private val mContext: Context,private val kisiList: List<kisiler>): RecyclerView.Adapter<KisiAdapter.KisiTutucu>() {
+class KisiAdapter(private val mContext: Context,private val kisiList: List<kisiler>,private val refkisiler: DatabaseReference): RecyclerView.Adapter<KisiAdapter.KisiTutucu>() {
     inner class KisiTutucu(val binding: ListItemBinding ):RecyclerView.ViewHolder(binding.root){
 
 
@@ -46,7 +47,9 @@ class KisiAdapter(private val mContext: Context,private val kisiList: List<kisil
                         true
                     }
                     R.id.KisiSil -> {
-                      Snackbar.make(it,"Silinsin mi",Snackbar.LENGTH_LONG).setAction("Evet"){}.show()
+                      Snackbar.make(it,"Silinsin mi",Snackbar.LENGTH_LONG).setAction("Evet"){
+                          refkisiler.child(kisi.kisi_id!!).removeValue()
+                      }.show()
                         true
                     }
                     else -> false
@@ -72,6 +75,10 @@ class KisiAdapter(private val mContext: Context,private val kisiList: List<kisil
         alertDialog.setPositiveButton("Güncelle"){_,_ ->
             val name = editTextName.text.toString().trim()
             val phone=editTextphone.text.toString().trim()
+            val bilgiler=HashMap<String,Any>()
+            bilgiler.put("kisiAd",name)
+            bilgiler.put("kisiler_tel",phone)
+            refkisiler.child(kisi.kisi_id!!).updateChildren(bilgiler)
             Toast.makeText(mContext,"$name - $phone ", Toast.LENGTH_LONG).show()
         }
         alertDialog.setNegativeButton("İptal"){ _, _ ->}
