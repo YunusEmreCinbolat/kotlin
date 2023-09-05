@@ -59,24 +59,23 @@ class KisiAdapter(private val mContext: Context,private val kisiList: List<kisil
 
 
     }
-     fun showAlert(user: kisiler){
-        val design=LayoutInflater.from(mContext).inflate(R.layout.alert_design,null)
+    private fun showAlert(kisi: kisiler){
+        val design= LayoutInflater.from(mContext).inflate(R.layout.alert_design,null)
         val editTextName=design.findViewById(R.id.name_et) as EditText
         val  editTextphone=design.findViewById(R.id.phone_et) as EditText
+        editTextName.setText(kisi.kisi_ad)
+        editTextphone.setText(kisi.kisi_tel)
 
-        editTextName.setText(user.kisi_ad)
-        editTextphone.setText(user.kisi_tel.toString())
-
-            val alertDialog=AlertDialog.Builder(mContext).setTitle("Kisi Güncelle").setView(design).setPositiveButton("Güncelle"){dialogInterface,i ->
-                val name = editTextName.text.toString().trim()
-                val phone=editTextphone.text.toString().trim()
-                Toast.makeText(mContext,"$name - $phone ",Toast.LENGTH_LONG).show()
-            }
-            .setNegativeButton("İptal"){ dialogInterface, i ->
-
-            }
-            .create()
-            .show()
+        val alertDialog= AlertDialog.Builder(mContext)
+        alertDialog.setTitle("Kişi Güncelle")
+        alertDialog.setView(design)
+        alertDialog.setPositiveButton("Güncelle"){_,_ ->
+            val name = editTextName.text.toString().trim()
+            val phone=editTextphone.text.toString().trim()
+            Toast.makeText(mContext,"$name - $phone ", Toast.LENGTH_LONG).show()
+        }
+        alertDialog.setNegativeButton("İptal"){ _, _ ->}
+        alertDialog.create().show()
     }
 
 }

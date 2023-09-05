@@ -3,14 +3,18 @@ package com.example.kisileruygulamasi
 import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.Menu
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kisileruygulamasi.databinding.ActivityMainBinding
 import com.google.firebase.database.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnQueryTextListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var kisilerArrayList: ArrayList<kisiler>
     private lateinit var kisiAdapter: KisiAdapter
@@ -52,6 +56,14 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu,menu)
+        val item=menu?.findItem(R.id.action_ara)
+        val searchView=item?.actionView as SearchView
+        searchView.setOnQueryTextListener(this)
+        return super.onCreateOptionsMenu(menu)
+    }
     private fun showAlert(){
         val design= LayoutInflater.from(this).inflate(R.layout.alert_design,null)
         val editTextName=design.findViewById(R.id.name_et) as EditText
@@ -69,5 +81,16 @@ class MainActivity : AppCompatActivity() {
         alertDialog.setNegativeButton("İptal"){ dialogInterface, i ->}
         alertDialog.create().show()
     }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+       Log.e("Gönderilen arama",query.toString())
+        return true
+    }
+
+    override fun onQueryTextChange(newText: String?): Boolean {
+        Log.e("Harf girdikçe",newText.toString())
+        return true
+    }
+
 
 }
