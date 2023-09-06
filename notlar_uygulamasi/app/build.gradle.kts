@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.example.notesapp"
     compileSdk = 33
-
+    buildFeatures{
+        viewBinding=true
+    }
     defaultConfig {
         applicationId = "com.example.notesapp"
         minSdk = 24
