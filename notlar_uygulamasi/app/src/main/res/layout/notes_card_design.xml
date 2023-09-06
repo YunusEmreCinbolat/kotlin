@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/notesCv"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="132dp"
         android:layout_margin="40dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,25 +20,25 @@
                 android:id="@+id/textViewnoteTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="23dp"
-                android:layout_marginBottom="35dp"
+                android:layout_marginTop="16dp"
                 android:text="Başlık"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textViewnoteContent"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="13dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="16dp"
                 android:text="İçerik"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textViewnoteTitle" />
 
@@ -46,25 +46,25 @@
                 android:id="@+id/buttonDelete"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="18dp"
                 android:backgroundTint="#FD0808"
                 android:text="Sil"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textViewnoteTitle"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.187"
+                app:layout_constraintStart_toStartOf="@+id/textViewnoteContent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewnoteContent" />
 
             <Button
                 android:id="@+id/buttonUpdate"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="16dp"
                 android:text="Güncelle"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5" />
+                app:layout_constraintStart_toEndOf="@+id/buttonDelete"
+                app:layout_constraintTop_toBottomOf="@+id/textViewnoteContent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

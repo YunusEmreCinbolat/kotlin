@@ -9,8 +9,10 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.databinding.NotesCardDesignBinding
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.database.DatabaseReference
 
-class noteAdapter(private val mContext:Context,private val noteList: List<noteContent>):RecyclerView.Adapter<noteAdapter.noteHolder>() {
+class noteAdapter(private val mContext:Context,private val noteList: List<noteContent>,private val refNotes: DatabaseReference):RecyclerView.Adapter<noteAdapter.noteHolder>() {
     inner class noteHolder(tasarim: NotesCardDesignBinding):RecyclerView.ViewHolder(tasarim.root) {
 
     }
@@ -29,7 +31,9 @@ class noteAdapter(private val mContext:Context,private val noteList: List<noteCo
         holder.itemView.findViewById<TextView>(R.id.textViewnoteTitle).text=note.note_title
         holder.itemView.findViewById<TextView>(R.id.textViewnoteContent).text=note.note_content
         holder.itemView.findViewById<Button>(R.id.buttonDelete).setOnClickListener {
-
+            Snackbar.make(it,"Silinsin mi",Snackbar.LENGTH_LONG).setAction("Evet"){
+                refNotes.child(note.note_id!!).removeValue()
+            }.show()
         }
         holder.itemView.findViewById<Button>(R.id.buttonUpdate).setOnClickListener {
 

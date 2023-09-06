@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                         noteList.add(notes)
                     }
                 }
-                noteAdapter= noteAdapter(applicationContext,noteList)
+                noteAdapter= noteAdapter(applicationContext,noteList,refNote)
                 binding.notesRv.adapter=noteAdapter
                 noteAdapter.notifyDataSetChanged()
             }
