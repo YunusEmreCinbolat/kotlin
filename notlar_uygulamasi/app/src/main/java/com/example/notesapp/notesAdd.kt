@@ -1,5 +1,6 @@
 package com.example.notesapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,6 +16,11 @@ class notesAdd : AppCompatActivity() {
         setContentView(binding.root)
         binding.toolbarnotesAdd.title="Not ekle"
         setSupportActionBar(binding.toolbarnotesAdd)
+        binding.buttongoNote.setOnClickListener {
+            val intent= Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         binding.buttonSave.setOnClickListener{
             val baslik= binding.editTextNoteTitle.toString().trim()
             val icerik=binding.editTextnoteContent.text.toString().trim()
