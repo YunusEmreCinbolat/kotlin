@@ -13,7 +13,7 @@ class notesAdd : AppCompatActivity() {
         binding.toolbarnotesAdd.title="Not ekle"
         setSupportActionBar(binding.toolbarnotesAdd)
         binding.buttonSave.setOnClickListener{
-            
+
         }
     }
 }
