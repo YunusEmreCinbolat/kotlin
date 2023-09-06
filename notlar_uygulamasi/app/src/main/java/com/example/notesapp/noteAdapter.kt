@@ -27,7 +27,7 @@ class noteAdapter(private val mContext:Context,private val noteList: List<noteCo
     override fun onBindViewHolder(holder: noteHolder, position: Int) {
         val note=noteList.get(position)
         holder.itemView.findViewById<TextView>(R.id.textViewnoteTitle).text=note.note_title
-        holder.itemView.findViewById<TextView>(R.id.textViewnoteTitle).text=note.note_content
+        holder.itemView.findViewById<TextView>(R.id.editTextnoteContent).text=note.note_content
         holder.itemView.findViewById<Button>(R.id.buttonDelete).setOnClickListener {
 
         }
