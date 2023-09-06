@@ -34,7 +34,7 @@ class noteAdapter(private val mContext:Context,private val noteList: List<noteCo
         holder.itemView.findViewById<Button>(R.id.buttonUpdate).setOnClickListener {
 
         }
-      
+
 
     }
 }
