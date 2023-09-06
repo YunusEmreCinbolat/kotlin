@@ -1,11 +1,13 @@
 package com.example.notesapp
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.databinding.NotesCardDesignBinding
@@ -28,15 +30,17 @@ class noteAdapter(private val mContext:Context,private val noteList: List<noteCo
 
     override fun onBindViewHolder(holder: noteHolder, position: Int) {
         val note=noteList.get(position)
+
         holder.itemView.findViewById<TextView>(R.id.textViewnoteTitle).text=note.note_title
         holder.itemView.findViewById<TextView>(R.id.textViewnoteContent).text=note.note_content
         holder.itemView.findViewById<Button>(R.id.buttonDelete).setOnClickListener {
             Snackbar.make(it,"Silinsin mi",Snackbar.LENGTH_LONG).setAction("Evet"){
+                Log.e("errrr",note.note_id.toString())
                 refNotes.child(note.note_id!!).removeValue()
             }.show()
         }
         holder.itemView.findViewById<Button>(R.id.buttonUpdate).setOnClickListener {
-
+            Snackbar.make(it,"${note.note_title}",Snackbar.LENGTH_LONG).show()
         }
 
 
