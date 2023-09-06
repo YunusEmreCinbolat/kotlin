@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     val note_content = note.child("note_content").getValue(String::class.java)
 
                     if (note_id != null && note_title != null && note_content != null) {
-                        val notes = noteContent(note_id, note_title, note_content)
+                        val notes = noteContent(note.key, note_title, note_content)
                         noteList.add(notes)
                     }
                 }
