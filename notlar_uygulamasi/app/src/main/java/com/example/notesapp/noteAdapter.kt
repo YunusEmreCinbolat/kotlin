@@ -26,5 +26,6 @@ class noteAdapter(private val mContext:Context,private val noteList: List<noteCo
         val note=noteList.get(position)
         holder.itemView.findViewById<TextView>(R.id.textViewnoteTitle).text=note.note_title
         holder.itemView.findViewById<TextView>(R.id.textViewnoteTitle).text=note.note_content
+
     }
 }
