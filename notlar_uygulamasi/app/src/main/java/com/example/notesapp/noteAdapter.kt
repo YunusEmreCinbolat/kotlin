@@ -1,6 +1,7 @@
 package com.example.notesapp
 
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesapp.databinding.NotesCardDesignBinding
 import com.google.android.material.snackbar.Snackbar
@@ -40,7 +42,11 @@ class noteAdapter(private val mContext:Context,private val noteList: List<noteCo
             }.show()
         }
         holder.itemView.findViewById<Button>(R.id.buttonUpdate).setOnClickListener {
-            Snackbar.make(it,"${note.note_title}",Snackbar.LENGTH_LONG).show()
+            val intent = Intent(mContext, notesUpdate::class.java)
+            intent.putExtra("noteId", note.note_id)
+            intent.putExtra("noteTitle", note.note_title)
+            intent.putExtra("noteContent", note.note_content)
+            holder.itemView.context.startActivity(intent)
         }
 
 

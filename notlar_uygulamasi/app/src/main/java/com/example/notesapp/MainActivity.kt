@@ -37,8 +37,12 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 noteList=ArrayList()
                 for(note in snapshot.children){
-                    val notes=note.getValue(noteContent::class.java)
-                    if(notes!=null){
+                    val note_id = note.child("note_id").getValue(String::class.java)
+                    val note_title = note.child("note_title").getValue(String::class.java)
+                    val note_content = note.child("note_content").getValue(String::class.java)
+
+                    if (note_id != null && note_title != null && note_content != null) {
+                        val notes = noteContent(note_id, note_title, note_content)
                         noteList.add(notes)
                     }
                 }
