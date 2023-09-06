@@ -22,8 +22,8 @@ class notesAdd : AppCompatActivity() {
             finish()
         }
         binding.buttonSave.setOnClickListener{
-            val baslik= binding.editTextNoteTitle.toString().trim()
-            val icerik=binding.editTextnoteContent.text.toString().trim()
+            val baslik= binding.editTextNoteTitle.text.toString().trim()
+            val icerik=binding.editTextnoteContent.text.toString()
             if(!baslik.isEmpty() && !icerik.isEmpty()) {
                 val refNote = database.getReference("Notlar")
                 val note = noteContent("", baslik, icerik)
