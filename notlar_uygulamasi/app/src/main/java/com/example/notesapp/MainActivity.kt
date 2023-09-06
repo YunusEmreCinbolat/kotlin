@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbarHomepage)
         binding.notesRv.setHasFixedSize(true)
         binding.notesRv.layoutManager=LinearLayoutManager(this)
+        AllNotesShow()
         binding.fabnoteAdd.setOnClickListener {
             val intent=Intent(this,notesAdd::class.java)
             startActivity(intent)
