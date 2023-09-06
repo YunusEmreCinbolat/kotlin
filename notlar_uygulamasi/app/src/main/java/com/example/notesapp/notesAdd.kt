@@ -2,6 +2,7 @@ package com.example.notesapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.notesapp.databinding.ActivityNotesAddBinding
 import com.google.firebase.database.FirebaseDatabase
 
@@ -17,8 +18,14 @@ class notesAdd : AppCompatActivity() {
         binding.buttonSave.setOnClickListener{
             val baslik= binding.editTextNoteTitle.toString().trim()
             val icerik=binding.editTextnoteContent.text.toString().trim()
-            val refNote=database.getReference("Notlar")
-
+            if(!baslik.isEmpty() && !icerik.isEmpty()) {
+                val refNote = database.getReference("Notlar")
+                val note = noteContent("", baslik, icerik)
+                refNote.push().setValue(note)
+            }
+            else{
+                Toast.makeText(this,"Alanlar boş olamaz",Toast.LENGTH_LONG).show()
+            }
 
         }
     }
