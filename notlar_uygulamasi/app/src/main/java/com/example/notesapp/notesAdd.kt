@@ -18,7 +18,7 @@ class notesAdd : AppCompatActivity() {
             val baslik= binding.editTextNoteTitle.toString().trim()
             val icerik=binding.editTextnoteContent.text.toString().trim()
             val refNote=database.getReference("Notlar")
-            
+
 
         }
     }
