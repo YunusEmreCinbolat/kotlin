@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.toolbarHomepage.title="Notlarım"
+        setSupportActionBar(binding.toolbarHomepage)
         binding.notesRv.setHasFixedSize(true)
         binding.notesRv.layoutManager=LinearLayoutManager(this)
         binding.fabnoteAdd.setOnClickListener {
