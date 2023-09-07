@@ -1,6 +1,7 @@
 package com.example.cocukeglence
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +34,9 @@ class KategorilerAdapter(private  val mContext: Context,private val kategoriList
         val kategoriler= kategoriListe.get(position)
         holder.textViewKategoriAd.text=kategoriler.kategori_ad
         holder.kategori_card.setOnClickListener {
-
+            val intent=Intent(mContext,IcerikActivity::class.java)
+            intent.putExtra("kategoriNesne",kategoriler)
+            mContext.startActivity(intent)
         }
     }
 }
