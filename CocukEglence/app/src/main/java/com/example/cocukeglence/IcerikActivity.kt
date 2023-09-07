@@ -14,7 +14,11 @@ class IcerikActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityIcerikBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.toolbarIcerikler.title = "İçerik"
+
+        val kategori=intent.getSerializableExtra("kategoriNesne") as Kategoriler
+
+
+        binding.toolbarIcerikler.title = "${kategori.kategori_ad}"
         setSupportActionBar(binding.toolbarIcerikler)
         binding.icerikRv.setHasFixedSize(true)
         binding.icerikRv.layoutManager =
