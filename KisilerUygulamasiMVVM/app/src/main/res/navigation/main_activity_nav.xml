@@ -21,7 +21,11 @@
         android:id="@+id/kisiDetayFragment2"
         android:name="com.example.kisileruygulamasimvvm.ui.fragment.KisiDetayFragment"
         android:label="fragment_kisi_detay"
-        tools:layout="@layout/fragment_kisi_detay" />
+        tools:layout="@layout/fragment_kisi_detay" >
+        <argument
+            android:name="kisi"
+            app:argType="com.example.kisileruygulamasimvvm.data.entity.Kisiler" />
+    </fragment>
     <fragment
         android:id="@+id/kisiKayitFragment2"
         android:name="com.example.kisileruygulamasimvvm.ui.fragment.KisiKayitFragment"
