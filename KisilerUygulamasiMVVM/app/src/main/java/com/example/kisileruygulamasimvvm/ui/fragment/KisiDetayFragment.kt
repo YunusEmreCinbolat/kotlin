@@ -25,7 +25,7 @@ class KisiDetayFragment : Fragment() {
           binding.edittextkisiAd.setText(gelenKisi.kisiAd)
           binding.edittextkisiTel.setText(gelenKisi.kisiTel)
 
-          binding.buttonKaydet.setOnClickListener {
+          binding.buttonGuncelle.setOnClickListener {
               val kisiAd=binding.edittextkisiAd.text.toString()
               val kisiTel=binding.edittextkisiTel.text.toString()
               guncelle(gelenKisi.kisiId,kisiAd,kisiTel)
