@@ -14,7 +14,7 @@
             android:id="@+id/kisiDetayGecis"
             app:destination="@id/kisiDetayFragment2" />
         <action
-            android:id="@+id/kisikayıtgecis"
+            android:id="@+id/kisikayitgecis"
             app:destination="@id/kisiKayitFragment2" />
     </fragment>
     <fragment

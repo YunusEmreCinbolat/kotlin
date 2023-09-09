@@ -1,11 +1,13 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
     namespace = "com.example.kisileruygulamasimvvm"
     compileSdk = 34
+    buildFeatures { viewBinding=true }
 
     defaultConfig {
         applicationId = "com.example.kisileruygulamasimvvm"
