@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "94628892946",
+    "project_id": "cocukeglence-24e75",
+    "storage_bucket": "cocukeglence-24e75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94628892946:android:31fe62aeecc978d8aca3cb",
+        "android_client_info": {
+          "package_name": "com.example.cocukeglence"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8vpwXRtr2BMHhINPLsBHnWbXP7Aq47lo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

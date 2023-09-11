@@ -2,7 +2,6 @@ package com.example.cocukeglence
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.cocukeglence.databinding.ActivityIcerikBinding
 
@@ -15,7 +14,7 @@ class IcerikActivity : AppCompatActivity() {
         binding = ActivityIcerikBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val kategori=intent.getSerializableExtra("kategoriNesne") as Kategoriler
+        val kategori=intent.getSerializableExtra("kategoriNesne") as kategoriler
 
 
         binding.toolbarIcerikler.title = "${kategori.kategori_ad}"
@@ -24,7 +23,7 @@ class IcerikActivity : AppCompatActivity() {
         binding.icerikRv.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         icerikListe = java.util.ArrayList()
-        val k = Kategoriler(1, "MASAL")
+        val k = kategoriler(1, "MASAL")
         val y = IcerikDetay(1, "Keloğlan",)
         val c1 = Icerikler(1, "prens", "prens", "prens", k, y)
         val c2 = Icerikler(2, "masalevi", "masalevi", "masalevi", k, y)

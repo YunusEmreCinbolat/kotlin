@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
-class KategorilerAdapter(private  val mContext: Context,private val kategoriListe:List<Kategoriler>):RecyclerView.Adapter<KategorilerAdapter.CardTasarimTutucu>() {
+class KategorilerAdapter(private  val mContext: Context,private val kategoriListe:List<kategoriler>):RecyclerView.Adapter<KategorilerAdapter.CardTasarimTutucu>() {
 
     inner class CardTasarimTutucu(tasarim: View):RecyclerView.ViewHolder(tasarim){
         var kategori_card:CardView
@@ -36,6 +36,7 @@ class KategorilerAdapter(private  val mContext: Context,private val kategoriList
         holder.kategori_card.setOnClickListener {
             val intent=Intent(mContext,IcerikActivity::class.java)
             intent.putExtra("kategoriNesne",kategoriler)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             mContext.startActivity(intent)
         }
     }
