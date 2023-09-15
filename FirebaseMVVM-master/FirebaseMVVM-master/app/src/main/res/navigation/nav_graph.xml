@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/childCategoryFragment">
+
+    <fragment
+        android:id="@+id/childCategoryFragment"
+        android:name="com.ubuntuyouiwe.firebasemvvm.view.child_category.ChildCategoryFragment"
+        android:label="fragment_child_category"
+        tools:layout="@layout/fragment_child_category" >
+        <action
+            android:id="@+id/action_childCategoryFragment_to_categoryDetailsFragment"
+            app:destination="@id/categoryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryDetailsFragment"
+        android:name="com.ubuntuyouiwe.firebasemvvm.view.category_details.CategoryDetailsFragment"
+        android:label="fragment_category_details"
+        tools:layout="@layout/fragment_category_details" />
+</navigation>
