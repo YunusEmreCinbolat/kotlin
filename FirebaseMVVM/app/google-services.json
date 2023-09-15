@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "857692572644",
+    "project_id": "cocukeglence-cedaa",
+    "storage_bucket": "cocukeglence-cedaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857692572644:android:d153ce785c83fabfc855f1",
+        "android_client_info": {
+          "package_name": "com.ubuntuyouiwe.firebasemvvm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMRSZIgBTxYGHunmIgaMv7XuP5r5oZwb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
