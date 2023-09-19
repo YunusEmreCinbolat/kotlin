@@ -1,3 +1,5 @@
 package com.example.countrytravel
 
-data class Country()
+import java.io.Serializable
+
+data class Country (val name : String, val country:String, val image:Int) : Serializable {}
